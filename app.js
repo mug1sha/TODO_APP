@@ -3,6 +3,16 @@ const todoForm = document.querySelector('form');
 const todoInput = document.getElementById('todo-input');
 const todoListUL = document.getElementById('todo-list');
 
+function updateTime() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString(); // Or use toLocaleString() for full date+time
+    document.getElementById("current-time").textContent = timeString;
+  }
+  
+  // Update every second
+  setInterval(updateTime, 1000);
+  updateTime(); // Initial call
+
 let allTodos = getTodos();
 updateTodoList();
 

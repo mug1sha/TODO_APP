@@ -8,6 +8,9 @@
     <script src="app.js" defer></script>
 </head>
 <body>
+    <header>
+        <div id="current-time" style="font-size: 1rem; font-weight: bold;"></div>
+    </header>
     <h1>Todo App</h1>
     <div class="wrapper">
         <form>
@@ -45,5 +48,13 @@
             </li>
          </ul> 
     </div>
+    <footer style="text-align: center; padding: 1rem 0; font-size: 0.875rem; color: #888;">
+        &copy; <span id="year"></span> mug1sha Godson. All rights reserved.
+      </footer>
+      
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+      
 </body>
 </html>
